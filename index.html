@@ -1,12 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
+
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222524;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* the div for nav bar */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 90px;
+        }
+
+        /* div for search input and button */
+        .se {
+            margin-left: 00px;
+
+        }
+
+        /* div for nav links */
+        .na {
+
+            width: 40%;
+
+
+
+
+        }
+
+        .hd {
+            /* border: 2px solid #ffffff; */
+            color: white;
+
+            width: 20%;
+
+        }
+
+        /* navbar */
+
+        nav {
+            /* background-color: #2e7e77;      */
+
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        /* nav anchor tags */
+        nav a {
+            color: #dcf5fc;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        /* hover */
+        nav a:hover {
+            color: #2e7e77;
+        }
+
+        /* search bar */
+        search input {
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            margin-left: 10px;
+            background-color: #202926;
+            border: 2px solid #2e7e77;
+            color: #ffffff;
+
+
+        }
+
+        /* button */
+        search button {
+            padding: 5px 10px;
+            border: none;
+            /* border-radius: 5px; */
+            border-top-left-radius: px;
+            background-color: #2e7e77;
+            color: #fff;
+            margin-left: 9px;
+            border-radius: 5px;
+        }
+
+        .left {
+            width: 50%;
+            /* height: 400px; */
+            /* background-color: #2e7e77; */
+            /* border: 3px solid #ffffff; */
+            float: left;
+            margin-top: 100px;
+        }
+
+        .right {
+            width: 50%;
+            height: 555px;
+            /* background-color: #2e7e77; */
+            float: right;
+            margin-top: 100px;
+            /* border: 3px solid #ffffff; */
+        }
+
+        .doublehead {
+            /* color: #dcf5fc; */
+            font-size: 20px;
+            margin-left: 100px;
+            display: flex;
+            gap: 10px;
+            margin-top: 90px;
+            font-weight: 200;
+
+        }
+
+        .abdur {
+            font-size: 40px;
+            color: #2db9a2;
+            margin-left: 96px;
+            margin-top: 12px;
+        }
+
+        .im {
+            font-size: 18px;
+            color: #ffffff;
+            margin-left: 100px;
+            margin-top: 20px;
+            width: 60%;
+        }
+
+        .discrip {
+            font-size: 15px;
+            color: #bbbbbb;
+            margin-left: 100px;
+            margin-top: 25px;
+            width: 70%;
+        }
+
+        .talk {
+            margin-left: 100px;
+            margin-top: 70px;
+            padding: 10px 30px;
+            background: linear-gradient(330deg, #099c73, #08fdb8);
+            box-shadow: #09ce96 0px 4px 10px 0px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+
+        .fin {
+            width: 100%;
+            max-width: 100%;
+            /* height: 100px; */
+            background-color: #1a1a1a;
+            margin-top: 800px;
+
+
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 150px;
+        }
+
+        .service {
+            background-color: #222524;
+            padding: 20px;
+            border-radius: 10px;
+            width: 25%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .pinser {
+            font-size: 15px;
+            color: #bbbbbb;
+            margin-left: 10px;
+            margin-top: 25px;
+            width: 85%;
+        }
+
+        .projects {
+            width: 100%;
+            /* height: 400px; */
+            background-color: #222524;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .project-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 130px;
+            margin-bottom: 50px;
+            padding-bottom: 150px;
+            gap: 50px;
+            width: 100%;
+        }
+
+        .img {
+            /* background-color: #222524; */
+            padding: 20px;
+            /* border-radius: 10px; */
+            width: 40%;
+            /* box-shadow: 0 4px 8px rgba(63, 62, 62, 0.616); */
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+
+
+
+        }
+
+        .client {
+            width: 100%;
+            height: 400px;
+            background-color: #1a1a1a;
+            margin-top: 50px;
+        }
+    </style>
+
+
+
 </head>
+
 <body>
-    <h1>this is index file</h1>
-    
+    <div class="container">
+
+        <div class="hd">
+
+            <h2 style="margin-left: 30px;">My Portfolio</h2>
+
+        </div>
+
+        <div class="na">
+            <nav>
+
+                <a href="">Home</a>
+                <a href="">Projects</a>
+                <a href="">Resume</a>
+            </nav>
+        </div>
+        <div class="se">
+            <search><input type="text" placeholder="Search"><button>Search</button></search>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero">
+        <div class="left">
+            <div class="doublehead">
+                <p style="color: #ffffff;">Hello</p>
+                <p style="color: #2db9a2;">I'm</p>
+            </div>
+
+
+            <h1 class="abdur"> Abdur Rehman</h1>
+            <p class="im">I'm a web developer with a passion for creating beautiful and functional websites.</p>
+            <p class="discrip">
+                I specialize in front-end development and have experience working with HTML, CSS, JavaScript, and
+                various frameworks.
+
+            </p>
+
+            <button class="talk" type="button">Let's Talk</button>
+
+            <div class="icons">
+                <p style="font-weight: 100;color: #faf1f1;">Check Out My</p>
+                <img style="width: 25px;height: 25px;" src="/instagram-svgrepo-com (1).png">
+                <img style="width: 25px;height: 25px;" src="/linkedin-logo-svgrepo-com (1).png" alt="">
+                <a href="https://github.com/dashboard"><img style="width: 25px;height: 25px;margin-top: 9px;"
+                        src="/github-142-svgrepo-com.png" alt=""></a>
+            </div>
+
+
+
+        </div>
+        <div class="right">
+
+        </div>
+
+
+
+    </div>
+
+    <div class="fin">
+        <div class="doublehead" style="padding: 20px;">
+            <p style="color: #2db9a2;">My</p>
+            <p style="color: #ffffff;">Services</p>
+        </div>
+
+
+        <h1 class="abdur" style="color: #ffffff;margin-left: 110px;margin-top: -3px;">What I Do</h1>
+
+        <div class="services">
+
+            <div class="service">
+                <img src="/web-developer-svgrepo-com.png" style="width: 150px;height: 150px;" alt="">
+                <h2>Web Development</h2>
+                <p class="pinser"" >Front-end developer focused on building responsive layouts, interactive features, and optimized web solutions using the latest technologies.</p>
+            </div>
+            <div class=" service">
+                    <img src="/responsive-design-symbol-svgrepo-com.png" style="width: 150px;height: 150px;" alt="">
+                <h2>Responsive Design</h2>
+                <p class="pinser"" >Creating responsive designs that adapt seamlessly to different screen sizes and devices.</p>
+            </div>
+            <div class=" service">
+                    <img src="/seo-svgrepo-com.png" style="width: 150px;height: 150px;" alt="">
+                <h2>SEO Optimization</h2>
+                <p class="pinser"" >I optimize websites for search engines to improve visibility and drive traffic.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=" projects">
+
+                <div class="doublehead">
+                    <p style="color: #ffffff; font-size: 50px;margin-left: -60px; ">Our </p>
+                    <p style="color: #2db9a2; font-size: 50px; ">Projects</p>
+
+                </div>
+                <p style="color: #e4e1e1;margin-top: 10px;width: 480px;text-align: center;margin-left: 43px;">Explore my
+                    latest projects where I combine creativity and technology to build modern, responsive websites.</p>
+
+
+
+            </div>
+            <div class="project-images">
+                <div class="img"><img src="/homepage-seen-computer-screen.jpg" style="width: 420px;height: 260px;"
+                        alt=""></div>
+                <div class="img"><img src="/3795147.jpg" style="width: 420px;height: 260px;" alt=""></div>
+                <div class="img"><img src="/3401426.jpg" style="width: 420px;height: 260px;" alt=""></div>
+                <div class="img"><img src="/7475603.jpg" style="width: 420px;height: 260px;" alt=""></div>
+
+
+            </div>
+        </div>
+
+
+        <div class="client">
+
+
+            <div class="fin" style="margin-top: -100px;" >
+                <div class="doublehead" style="padding: 20px;">
+                    <p style="color: #2db9a2;">TESTINOMIALS</p>
+                    <!-- <p style="color: #ffffff;">Services</p> -->
+                </div>
+
+
+                <h1 class="abdur" style="color: #ffffff;margin-left: 110px;margin-top: -3px;">What Client Say</h1>
+
+                <div class="services">
+
+                    <div class="service">
+                        <img src="/profile-round-1342-svgrepo-com.png" style="width: 120px;height: 120px;" alt="">
+                        <h2>Ahmed Raza</h2>
+                        <p class="pinser"" >“I’m impressed by the modern design and attention to detail. The site looks amazing and performs smoothly!”</p>
+            </div>
+            <div class=" service">
+                            <img src="/profile-round-1342-svgrepo-com.png" style="width: 120px;height: 120px;"
+                                alt="">
+                        <h2>Hassan Ali</h2>
+                        <p class="pinser"" >“The team did a fantastic job on our website. It’s user-friendly and visually appealing!”</p>
+            </div>
+            <div class=" service">
+                            <img src="/profile-round-1342-svgrepo-com.png" style="width: 120px;height: 120px;" alt="">
+                        <h2>Fatima Noor</h2>
+                        <p class="pinser"" >“I appreciate the effort put into the SEO optimization. Our site traffic has significantly increased!”</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        </div>
+
+
+
 </body>
+
 </html>
